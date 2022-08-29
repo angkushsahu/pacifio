@@ -51,7 +51,6 @@ function App() {
 
 	useEffect(() => {
 		getStripeKey();
-		console.log(key);
 	}, [key]);
 
 	return (

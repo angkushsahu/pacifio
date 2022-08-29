@@ -10,7 +10,6 @@ const OnlyForAdmin = ({ children }: { children: ReactNode }) => {
 		if (!isAuth) {
 			navigate("/login");
 		}
-		console.log(__filename);
 	}, [navigate, isAuth]);
 
 	return <>{children}</>;

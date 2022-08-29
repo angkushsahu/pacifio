@@ -19,7 +19,6 @@ const AdminAllReviews = () => {
 
 	useEffect(() => {
 		dispatch(fetchAllProductsForAdmin());
-		console.log(__filename);
 	}, [dispatch]);
 
 	return (

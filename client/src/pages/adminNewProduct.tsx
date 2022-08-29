@@ -52,7 +52,6 @@ const AdminNewProduct = () => {
 		if (error) {
 			toast.error(error, toastOptions);
 		}
-		console.log(__filename);
 	}, [error]);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

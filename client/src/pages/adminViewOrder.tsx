@@ -22,12 +22,10 @@ const AdminViewOrder = () => {
 
 	useEffect(() => {
 		dispatch(getOneOrderForAdmin(path));
-		console.log(__filename);
 	}, [dispatch, path]);
 
 	const changeProcess = (e: ChangeEvent<HTMLSelectElement>) => {
 		setProcess(e.target.value);
-		console.log(e.target.value);
 	};
 
 	const submitProcessUpdate = (e: FormEvent) => {

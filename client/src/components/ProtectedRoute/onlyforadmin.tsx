@@ -13,7 +13,6 @@ const Protected = ({ children }: { children: ReactNode }) => {
 		if (user?.role !== "admin") {
 			navigate("/");
 		}
-		console.log(__filename);
 	}, [navigate, isAuth, user?.role]);
 
 	return <>{children}</>;

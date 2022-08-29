@@ -10,7 +10,6 @@ import ErrorPage from "./errorPage";
 const Product = () => {
 	const [refreshReviews, setRefreshReviews] = useState<boolean>(false);
 	const { pathname } = useLocation();
-	console.log(`${__filename} -> path name: ${pathname}`);
 	const data = useAppSelector(state => state.oneProduct);
 	const dispatch = useAppDispatch();
 
@@ -18,7 +17,6 @@ const Product = () => {
 		dispatch(fetchOneProduct(pathname));
 
 		dispatch(getAllReviews(data?.product?._id || ""));
-		console.log("this should be running for product");
 		// eslint-disable-next-line
 	}, [dispatch, pathname, refreshReviews]);
 

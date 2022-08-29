@@ -12,7 +12,6 @@ const AdminAllProducts = () => {
 
 	useEffect(() => {
 		dispatch(fetchAllProductsForAdmin());
-		console.log(__filename);
 	}, [dispatch, loading]);
 
 	const deleteProductFunctionality = (id: string) => {

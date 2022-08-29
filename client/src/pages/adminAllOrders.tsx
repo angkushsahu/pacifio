@@ -10,7 +10,6 @@ const AdminAllOrders = () => {
 
 	useEffect(() => {
 		dispatch(getAllOrdersForAdmin());
-		console.log(__filename);
 	}, [dispatch]);
 
 	return (

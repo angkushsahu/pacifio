@@ -15,7 +15,6 @@ const AdminUpdateProduct = () => {
 
 	useEffect(() => {
 		dispatch(fetchOneProduct(`/product/${path}`));
-		console.log(__filename);
 	}, [dispatch, path]);
 
 	const { product, error } = useAppSelector(state => state.oneProduct);
@@ -27,7 +26,6 @@ const AdminUpdateProduct = () => {
 		category: "",
 		stock: 0,
 	});
-	console.log(values);
 
 	const updateProductFunctionality = (e: FormEvent) => {
 		e.preventDefault();
@@ -56,11 +54,9 @@ const AdminUpdateProduct = () => {
 		if (error) {
 			toast.error(error, toastOptions);
 		}
-		console.log(__filename);
 	}, [error]);
 
 	useEffect(() => {
-		console.log("filename");
 		setValues({
 			name: product?.name || "",
 			description: product?.description || "",
@@ -71,7 +67,6 @@ const AdminUpdateProduct = () => {
 	}, [product]);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-		console.log(e.target.value);
 		setValues({ ...values, [e.target.name]: e.target.value });
 	};
 

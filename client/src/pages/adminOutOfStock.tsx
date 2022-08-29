@@ -11,7 +11,6 @@ const AdminOutOfStock = () => {
 
 	useEffect(() => {
 		dispatch(getAllOutOfStockProducts());
-		console.log(__filename);
 	}, [dispatch]);
 
 	return (

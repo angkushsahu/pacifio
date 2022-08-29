@@ -46,8 +46,6 @@ const UpdateProfilePage = () => {
 		reader.onload = () => {
 			setValues({ ...values, pic: String(reader.result) });
 		};
-
-		console.log(values);
 	};
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

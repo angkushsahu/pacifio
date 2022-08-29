@@ -66,8 +66,6 @@ const SignupPage: FC = () => {
 		reader.onload = () => {
 			setValues({ ...values, pic: String(reader.result) });
 		};
-
-		console.log(values);
 	};
 
 	return (

@@ -30,7 +30,6 @@ const AllProducts = () => {
 			fetchAllProducts({ item, priceRange, category, page: String(currentPage), ratings }),
 		);
 	}, [dispatch, item, currentPage, priceRange, category, ratings]);
-	console.log(data?.resultPerPage, data?.products?.length);
 
 	return (
 		<>

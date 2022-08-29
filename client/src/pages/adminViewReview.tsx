@@ -23,7 +23,6 @@ const AdminViewReview = () => {
 
 	useEffect(() => {
 		dispatch(fetchOneProduct(`/product/${path}`));
-		console.log(__filename);
 	}, [dispatch, path]);
 
 	const deleteReviewFunctionality = (id: string) => {

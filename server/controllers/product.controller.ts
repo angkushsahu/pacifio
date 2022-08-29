@@ -19,11 +19,9 @@ export const createProduct = catchAsyncErrors(
 				setPic = uploadImage.secure_url;
 				setPublicUrl = uploadImage.public_id;
 				images.push({ pic: setPic, publicUrl: setPublicUrl });
-				console.log("images", images);
 			}
 		}
 
-		console.log("images", images);
 		const { price, description, name, stock, category } = req.body;
 		const newProductObj = {
 			price,
@@ -38,7 +36,6 @@ export const createProduct = catchAsyncErrors(
 		if (!newProduct) {
 			return next(new ErrorHandler("Unable to create new product", 500));
 		}
-		console.log("product images", newProduct.images);
 
 		res.status(201).json({
 			success: true,
@@ -143,7 +140,6 @@ export const deleteProduct = catchAsyncErrors(
 
 		if (product.images) {
 			const imagesLength = product.images.length;
-			console.log(product.images);
 			for (let i = 0; i < imagesLength; i++) {
 				const image = product.images[i];
 				await cloudinaryConfig.uploader.destroy(image.publicUrl);

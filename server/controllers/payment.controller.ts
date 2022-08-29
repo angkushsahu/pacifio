@@ -7,14 +7,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", { apiVersion: "20
 export const processPayment = catchAsyncErrors(
 	async (req: Request, res: Response, next: NextFunction) => {
 		const { amount } = req.body;
-		console.log(amount);
 		const payment = await stripe.paymentIntents.create({
 			amount,
 			currency: "inr",
 			metadata: { company: "Pacifio" },
 		});
-
-		console.log(process.env.STRIPE_SECRET_KEY, process.env.STRIPE_API_KEY);
 
 		res.status(200).json({
 			success: true,

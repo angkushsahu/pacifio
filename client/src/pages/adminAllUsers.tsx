@@ -10,7 +10,6 @@ const AdminAllUsers = () => {
 
 	useEffect(() => {
 		dispatch(getAllUsersForAdmin());
-		console.log(__filename);
 	}, [dispatch]);
 
 	return (

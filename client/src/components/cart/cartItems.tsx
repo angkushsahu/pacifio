@@ -33,7 +33,6 @@ const CartItems = ({ item }: ICartItemProps) => {
 
 	useEffect(() => {
 		setTotalPrice(Number(numberOfProducts) * item?.product?.price);
-		console.log(__filename);
 	}, [numberOfProducts, item?.product?.price]);
 
 	return (
