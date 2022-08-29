@@ -7,7 +7,7 @@ const productSchema = new Schema(
 		description: { type: String, required: [true, "Please describe about the product"] },
 		price: { type: Number, required: [true, "Please enter the price of the product"] },
 		ratings: { type: Number, default: 0 },
-		images: [{ pic: { type: String } }, { publicUrl: { type: String } }],
+		images: [{ pic: { type: String }, publicUrl: { type: String } }],
 		category: { type: String, required: [true, "Please enter category of the product"] },
 		stock: { type: Number, required: [true, "Please enter product quantity"] },
 		numberOfReviews: { type: Number, default: 0 },
