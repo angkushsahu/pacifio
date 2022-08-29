@@ -53,6 +53,9 @@ const DashboardSidebar = ({ toggleSidebar, setToggleSidebar }: DashboardSidebarP
 							<Link to="/admin/create-product" onClick={closeTogglebar}>
 								Create
 							</Link>
+							<Link to="/admin/out-of-stock-products" onClick={closeTogglebar}>
+								Out Of Stock
+							</Link>
 						</div>
 					) : (
 						<></>
@@ -89,6 +92,7 @@ const DashboardSidebar = ({ toggleSidebar, setToggleSidebar }: DashboardSidebarP
 						<div className="flex flex-col gap-2 justify-center pl-8">
 							<Link to="/admin/all-products">All</Link>
 							<Link to="/admin/create-product">Create</Link>
+							<Link to="/admin/out-of-stock-products">Out Of Stock</Link>
 						</div>
 					) : (
 						<></>

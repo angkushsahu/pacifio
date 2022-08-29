@@ -6,7 +6,7 @@ import { getAllOutOfStockProducts, useAppDispatch, useAppSelector } from "../sto
 
 const AdminOutOfStock = () => {
 	const navigate = useNavigate();
-	const { products } = useAppSelector(state => state.allProducts);
+	const { outOfStockProducts } = useAppSelector(state => state.allProducts);
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
@@ -28,7 +28,7 @@ const AdminOutOfStock = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{products?.map(product => (
+						{outOfStockProducts?.map(product => (
 							<tr
 								key={product?._id}
 								className="bg-gradient-to-r from-gray-900 to-gray-700 shadow-lg shadow-black md:shadow-none px-4 pb-4 md:from-transparent md:to-transparent flex flex-col gap-4 my-8 md:table-row cursor-pointer border-spacing-4 border-collapse border-t-transparent border-t-[1em]"

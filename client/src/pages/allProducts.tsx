@@ -37,7 +37,7 @@ const AllProducts = () => {
 				<Loading />
 			) : data?.error ? (
 				<ErrorPage />
-			) : (
+			) : data?.products?.length ? (
 				<section className="px-4 sm:px-8 py-12">
 					<div className="center_screen relative">
 						<h1>All Products</h1>
@@ -95,6 +95,12 @@ const AllProducts = () => {
 						) : (
 							<></>
 						)}
+					</div>
+				</section>
+			) : (
+				<section className="center_screen">
+					<div className="fill_screen">
+						<h2 className="">No product found</h2>
 					</div>
 				</section>
 			)}
