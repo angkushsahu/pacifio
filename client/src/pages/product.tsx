@@ -17,6 +17,7 @@ const Product = () => {
 		dispatch(fetchOneProduct(pathname));
 
 		dispatch(getAllReviews(data?.product?._id || ""));
+		window.scrollTo(0, 0);
 		// eslint-disable-next-line
 	}, [dispatch, pathname, refreshReviews]);
 

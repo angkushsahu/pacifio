@@ -29,6 +29,7 @@ const AllProducts = () => {
 		dispatch(
 			fetchAllProducts({ item, priceRange, category, page: String(currentPage), ratings }),
 		);
+		window.scrollTo(0, 0);
 	}, [dispatch, item, currentPage, priceRange, category, ratings]);
 
 	return (
