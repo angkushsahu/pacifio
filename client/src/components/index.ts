@@ -1,0 +1,11 @@
+export { default as Header } from "./layout/header";
+export { default as Loading } from "./popups/loading";
+export { default as Footer } from "./layout/footer";
+export { default as HeroSection } from "./home/heroSection";
+export { default as ProtectedRoute } from "./ProtectedRoute/protected";
+export { default as OnlyForAdmin } from "./ProtectedRoute/onlyforadmin";
+export { default as CartItems } from "./cart/cartItems";
+export { default as ProgressBar } from "./order/progress";
+export { default as ProductItems } from "./order/productItems";
+export { default as DashboardSidebar } from "./admin/dashboardSidebar";
+export { default as Parent } from "./admin/parent";

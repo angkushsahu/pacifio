@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "NunitoSans-Italic";
+	src: url("../assets/fonts/NunitoSans-Italic.ttf");
+}
+@font-face {
+	font-family: "NunitoSans-SemiBoldItalic";
+	src: url("../assets/fonts/NunitoSans-SemiBoldItalic.ttf");
+}
+@font-face {
+	font-family: "Overlock-BoldItalic";
+	src: url("../assets/fonts/Overlock-BoldItalic.ttf");
+}
+
+@layer components {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #ffffff39 #334155;
+		@apply font-nunito-regular;
+	}
+	*::-webkit-scrollbar {
+		width: 0.5rem;
+		@apply bg-slate-700;
+	}
+	*::-webkit-scrollbar-thumb {
+		background-color: #ffffff39;
+		width: 0.2rem;
+		border-radius: 1rem;
+	}
+	*::selection {
+	}
+
+	.root {
+		@apply bg-gradient-to-r from-zinc-900 to-gray-700 text-white;
+	}
+	.fill_screen {
+		@apply min-h-[calc(100vh-3.5rem)];
+	}
+	.center_screen {
+		@apply max-w-7xl mx-auto;
+	}
+	h1 {
+		@apply text-3xl sm:text-4xl font-bold text-white font-overlock;
+	}
+	h2 {
+		@apply text-xl sm:text-2xl font-semibold text-gray-100 font-nunito-semibold;
+	}
+	.description {
+		@apply text-base sm:text-lg text-gray-200;
+	}
+	.primary_button {
+		@apply bg-blue-600 border-[1px] border-blue-600 outline-none rounded px-6 py-3 cursor-pointer transition-colors duration-300 hover:border-blue-800 hover:bg-blue-800 font-semibold;
+	}
+	.primary_danger_button {
+		@apply bg-red-600 border-[1px] border-red-600 outline-none rounded px-6 py-3 cursor-pointer transition-colors duration-300 hover:border-red-800 hover:bg-red-800 font-semibold;
+	}
+	.secondary_button {
+		@apply bg-transparent border-[1px] border-blue-600 outline-none text-blue-600 rounded px-6 py-3 cursor-pointer transition-colors duration-300 hover:border-blue-800 hover:bg-blue-800 hover:text-white font-semibold;
+	}
+	.secondary_danger_button {
+		@apply bg-transparent border-[1px] border-red-600 outline-none text-red-600 rounded px-6 py-3 cursor-pointer transition-colors duration-300 hover:border-red-800 hover:bg-red-800 hover:text-white font-semibold;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+		display: none;
+	}
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+	.input_container {
+		@apply relative w-full bg-transparent my-4 rounded border-2 border-slate-500 pb-2;
+	}
+	.input_container > label {
+		@apply px-2 pt-2 sm:px-4 w-full block text-sm text-gray-300;
+	}
+	.input_container > input,
+	.input_container > select,
+	.input_container > div,
+	.input_container > textarea {
+		@apply w-full bg-transparent outline-none border-none text-white text-base px-2 sm:px-4 mt-2 resize-none;
+	}
+	.input_container
+		.StripeElement
+		.ElementsApp
+		.CardNumberField-input-wrapper
+		.InputElement
+		.Input {
+		@apply text-white !important;
+	}
+	.input_container > select > option {
+		@apply bg-gray-700;
+	}
+	.input_container > svg {
+		@apply absolute top-1/2 -translate-y-1/2 right-2;
+	}
+	.pagination_container {
+		@apply mt-20 flex flex-wrap items-center justify-center;
+	}
+	.pagination_container > ul {
+		@apply flex flex-wrap gap-y-6 items-center justify-center;
+	}
+	.pagination_container > ul > li > a {
+		@apply p-2 border-2 border-blue-600;
+	}
+	.pagination_container > ul > li > a:hover {
+		@apply transition-colors duration-300 bg-blue-600;
+	}
+}
